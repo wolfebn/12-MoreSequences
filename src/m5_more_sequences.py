@@ -75,8 +75,15 @@ def sum_radii(circles):
       :type circles:  list | tuple of rg.Circle
       :rtype: int | float
     """
+    rads = 0
+    for k in range(len(circles)):
+        rads = rads + circles[k].radius
+    return rads
+
+
+
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     # Note: No fair using "slices" on ANY of these problems,
@@ -150,6 +157,16 @@ def count_last_n_odds(integers, n):
       :type n: int
       :rtype: int
     """
+    sum = 0
+    for k in range(len(integers)):
+        if k >= len(integers) - n:
+           if integers[k] % 2 ==1:
+               sum = sum + 1
+    return sum
+
+
+
+
     # ------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
     #     The testing code is already written for you (above).
