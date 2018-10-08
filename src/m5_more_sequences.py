@@ -168,7 +168,7 @@ def count_last_n_odds(integers, n):
 
 
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
 
@@ -242,8 +242,19 @@ def index_of_first_negative(numbers):
       :type numbers: list | tuple of float | int
       :rtype: int
     """
+    seq = 0
+    for k in range(len(numbers)):
+        if numbers[k] < 0:
+            return seq
+        seq = seq + 1
+        if seq == len(numbers):
+            seq = -1
+            return seq
+
+
+
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
 
@@ -300,8 +311,17 @@ def contains_an_a(s):
       :type s: str
       :rtype: bool
     """
+    base = False
+
+    for k in range(len(s)):
+        if s[k] == 'a':
+            base = True
+            return base
+    return base
+
+
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # Done: 5. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     ####################################################################
